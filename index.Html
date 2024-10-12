@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Wisdom Grace Int'l School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('foreign-school.jpg'); /* Replace with actual image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #00509e;
+        }
+        .contact, .payment {
+            display: flex;
+            justify-content: space-between;
+        }
+        .login-form, .result-form, .create-account-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="submit"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #00509e;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>First Wisdom Grace Int'l School</h1>
+
+        <div class="section contact">
+            <div>
+                <h2>Contact Information</h2>
+                <p>Phone 1: 07039287349</p>
+                <p>Phone 2: 08066959083</p>
+            </div>
+        </div>
+
+        <div class="section payment">
+            <div>
+                <h2>Returning Students/Pupils</h2>
+                <p>Make payment to: [Bank Name], Account No: 1234567890</p>
+            </div>
+            <div>
+                <h2>New Students/Pupils</h2>
+                <p>Make payment to: [Bank Name], Account No: 0987654321</p>
+            </div>
+        </div>
+
+        <div class="section login">
+            <h2>Login</h2>
+            <form class="login-form" action="/login" method="post">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="passkey" placeholder="Passkey" required>
+                <input type="submit" value="Login">
+            </form>
+            <p><a href="/forgot-password">Forgot Password?</a> | <a href="/create-account">Create New Account</a></p>
+        </div>
+
+        <div class="section create-account" id="create-account">
+            <h2>Create New Account</h2>
+            <form class="create-account-form" action="/create-account" method="post">
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="passkey" placeholder="Passkey" required>
+                <input type="password" name="confirm_passkey" placeholder="Confirm Passkey" required>
+                <input type="submit" value="Create Account">
+            </form>
+        </div>
+
+        <div class="section result-checking">
+            <h2>Check Results</h2>
+            <form class="result-form" action="/check-result" method="post">
+                <input type="text" name="pin" placeholder="Enter PIN" required>
+                <input type="submit" value="Check Result">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
